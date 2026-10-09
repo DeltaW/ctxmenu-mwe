@@ -1,0 +1,57 @@
+id           = "DeltaW/example"
+name         = "Context Menu Example"
+plugin_api   = 28
+version      = "1.0.0"
+author       = "DeltaW"
+license      = "MIT"
+icon         = "bug"
+description  = "Context Menu Bug"
+deprecated   = false
+tags         = ["demo"]
+
+
+[[widget]]
+id    = "widget1"
+entry = "widget1.luau"
+
+[[widget]]
+id    = "widget2"
+entry = "widget2.luau"
+
+
+# Not working
+[[panel]]
+id              = "mwe-1"
+entry           = "panel.luau"
+width           = 1020
+height          = 480
+placement       = "attached"
+position        = "center"
+open_near_click = true
+keyboard_focus  = "exclusive"
+
+
+# Working
+[[panel]]
+id              = "mwe-2"
+entry           = "panel.luau"
+# The bug does not seem to occur when using these dimensions
+width           = 400
+height          = 300
+placement       = "attached"
+position        = "center"
+open_near_click = true
+keyboard_focus  = "exclusive"
+
+
+# Working
+[[panel]]
+id              = "mwe-3"
+entry           = "panel.luau"
+width           = 1020
+height          = 480
+placement       = "attached"
+position        = "center"
+# Regardless of dimensions, the bug does not seem to occur when the panel isn't opened near the trigger
+open_near_click = false
+keyboard_focus  = "exclusive"

@@ -1,0 +1,12 @@
+[[plugin]]
+id           = "DeltaW/example"
+name         = "Context Menu Example"
+plugin_api   = 28
+version      = "1.0.0"
+author       = "DeltaW"
+license      = "MIT"
+icon         = "bug"
+description  = "Context Menu Bug"
+deprecated   = false
+tags         = ["demo"]
+dependencies = []
